@@ -4,7 +4,12 @@
 Image [<img src="https://colab.research.google.com/assets/colab-badge.svg" align="center">](https://colab.research.google.com/github/jantic/DeOldify/blob/master/ImageColorizerColab.ipynb) |
 Video [<img src="https://colab.research.google.com/assets/colab-badge.svg" align="center">](https://colab.research.google.com/github/jantic/DeOldify/blob/master/VideoColorizerColab.ipynb)
 
+**NEW** Instructions on how to use the Colabs above have been kindly provided in video tutorial form by Old Ireland in Colour's John Breslin.  It's great! Click video image below to watch.
+
+[![](http://img.youtube.com/vi/VaEl0faDw38/0.jpg)](http://www.youtube.com/watch?v=VaEl0faDw38)
+
 Get more updates on [Twitter <img src="resource_images/Twitter_Social_Icon_Rounded_Square_Color.svg" width="16">](https://twitter.com/citnaj).
+
 
 ## Table of Contents
 - [About DeOldify](#about-deoldify)
@@ -35,6 +40,7 @@ We'll get into the details in a bit, but first let's see some pretty pictures an
 * Much less "blue bias"
 * **Video** - it actually looks good!  
 * **NoGAN** - a new and weird but highly effective way to do GAN training for image to image.
+* **CPU** - now it's possible to run the prediction on CPU!
 
 ## Example Videos
 
@@ -217,6 +223,8 @@ Special thanks to Matt Robinson and María Benavente for their image Colab noteb
 * **(Colorization Alone) A decent graphics card**. Approximately 4GB+ memory video cards should be sufficient.
 * **Linux (or maybe Windows 10)**  I'm using Ubuntu 16.04, but nothing about this precludes Windows 10 support as far as I know.  I just haven't tested it and am not going to make it a priority for now.  
 
+**CPU:** Prediction is now available to run it on CPU.
+
 #### Easy Install
 
 You should now be able to do a simple install with Anaconda. Here are the steps:
@@ -237,6 +245,14 @@ jupyter lab
 ```
 
 From there you can start running the notebooks in Jupyter Lab, via the url they provide you in the console.  
+
+**CPU:** You need to set CPU on the notebook to run the prediction using your CPU.
+
+```
+from utils.device import *
+
+device('cpu')
+```
 
 > **Note:** You can also now do "conda activate deoldify" if you have the latest version of conda and in fact that's now recommended. But a lot of people don't have that yet so I'm not going to make it the default instruction here yet.
 
